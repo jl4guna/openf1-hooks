@@ -6,15 +6,15 @@ This library provides a set of clean, typed, custom React Query hooks to easily 
 
 Built with TypeScript for robust type safety.
 
-[![npm version](https://badge.fury.io/js/openf1-hooks.svg)](https://badge.fury.io/js/openf1-hooks) <!-- TODO: Update badge link after publishing -->
+[![npm version](https://badge.fury.io/js/openf1-hooks.svg)](https://www.npmjs.com/package/openf1-hooks)
 
 ## Features
 
-*   **Simple API:** One hook per OpenF1 API endpoint.
-*   **Type-Safe:** Fully written in TypeScript with exported types for API responses and query parameters.
-*   **React Query Integration:** Leverages `@tanstack/react-query` (v5) for caching, background updates, stale-while-revalidate, etc.
-*   **Lightweight:** Uses native `fetch` and has minimal dependencies.
-*   **Flexible Filtering:** Supports all filtering capabilities of the OpenF1 API.
+* **Simple API:** One hook per OpenF1 API endpoint.
+* **Type-Safe:** Fully written in TypeScript with exported types for API responses and query parameters.
+* **React Query Integration:** Leverages `@tanstack/react-query` (v5) for caching, background updates, stale-while-revalidate, etc.
+* **Lightweight:** Uses native `fetch` and has minimal dependencies.
+* **Flexible Filtering:** Supports all filtering capabilities of the OpenF1 API.
 
 ## Installation
 
@@ -63,26 +63,26 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 ## Usage
 
-1.  **Import** the hook corresponding to the OpenF1 API endpoint you need.
-2.  **Call** the hook within your functional React component, optionally passing parameters for filtering and React Query options.
-3.  **Use** the returned state (`data`, `isLoading`, `isError`, `error`, etc.) to render your UI.
+1. **Import** the hook corresponding to the OpenF1 API endpoint you need.
+2. **Call** the hook within your functional React component, optionally passing parameters for filtering and React Query options.
+3. **Use** the returned state (`data`, `isLoading`, `isError`, `error`, etc.) to render your UI.
 
 ### Return Value
 
 Each hook returns the standard object provided by React Query's `useQuery`, which includes:
 
-*   `data`: The fetched data from the API (typed according to the endpoint, e.g., `Session[]`, `CarData[]`). `undefined` while loading or if an error occurred.
-*   `isLoading`: `true` if the query is currently fetching for the first time.
-*   `isFetching`: `true` if the query is fetching in the background (e.g., refetching).
-*   `isSuccess`: `true` if the query completed successfully.
-*   `isError`: `true` if the query encountered an error.
-*   `error`: The error object if `isError` is true, otherwise `null`.
-*   `refetch`: A function to manually trigger a refetch of the query.
-*   ... and other `useQuery` properties.
+* `data`: The fetched data from the API (typed according to the endpoint, e.g., `Session[]`, `CarData[]`). `undefined` while loading or if an error occurred.
+* `isLoading`: `true` if the query is currently fetching for the first time.
+* `isFetching`: `true` if the query is fetching in the background (e.g., refetching).
+* `isSuccess`: `true` if the query completed successfully.
+* `isError`: `true` if the query encountered an error.
+* `error`: The error object if `isError` is true, otherwise `null`.
+* `refetch`: A function to manually trigger a refetch of the query.
+* ... and other `useQuery` properties.
 
 ### Examples
 
-**1. Fetching All Meetings in 2024**
+### **1. Fetching All Meetings in 2024**
 
 ```jsx
 import React from 'react';
@@ -109,7 +109,7 @@ function MeetingList() {
 }
 ```
 
-**2. Fetching Specific Driver Info for the Latest Session**
+### **2. Fetching Specific Driver Info for the Latest Session**
 
 ```jsx
 import React from 'react';
@@ -137,7 +137,7 @@ function DriverInfo({ driverNumber = 1 }) { // Default to Max Verstappen (No. 1)
 }
 ```
 
-**3. Fetching High-Speed Car Telemetry (Filtering with Operators)**
+### **3. Fetching High-Speed Car Telemetry (Filtering with Operators)**
 
 This example demonstrates filtering car data where speed is greater than or equal to 330 km/h.
 
@@ -204,12 +204,12 @@ Each hook corresponds to an endpoint in the OpenF1 API v1.
 
 All hooks accept an optional `params` object as the first argument to filter the API results. These correspond to the query parameters supported by the OpenF1 API.
 
-*   **Common Parameters:** Most endpoints support `session_key`, `meeting_key`, and `driver_number`. Use the value `'latest'` for `session_key` or `meeting_key` to get data from the most recent session or meeting.
-*   **Specific Parameters:** Each hook uses a specific parameter type (e.g., `LapsParams`, `SessionsParams`, see table above) which may include additional fields relevant to that endpoint (e.g., `lap_number` for `useLaps`, `year` for `useSessions`). Refer to `src/types.ts` (or the generated type definitions) for details.
-*   **Operator Filtering:** The OpenF1 API allows filtering with operators (like `>`, `<`, `>=`, `<=`). You can pass these directly as keys in the `params` object. The key should be the field name followed by the operator.
-    *   Example: `params: { 'speed>=': 300 }` filters for car data where speed is greater than or equal to 300.
-    *   Example: `params: { 'date<': '2024-05-20T12:00:00' }` filters for data before a specific timestamp.
-*   Refer to the [OpenF1 API Documentation - Data Filtering](https://openf1.org/#data-filtering) section for more details on available filters and operators.
+* **Common Parameters:** Most endpoints support `session_key`, `meeting_key`, and `driver_number`. Use the value `'latest'` for `session_key` or `meeting_key` to get data from the most recent session or meeting.
+* **Specific Parameters:** Each hook uses a specific parameter type (e.g., `LapsParams`, `SessionsParams`, see table above) which may include additional fields relevant to that endpoint (e.g., `lap_number` for `useLaps`, `year` for `useSessions`). Refer to `src/types.ts` (or the generated type definitions) for details.
+* **Operator Filtering:** The OpenF1 API allows filtering with operators (like `>`, `<`, `>=`, `<=`). You can pass these directly as keys in the `params` object. The key should be the field name followed by the operator.
+* Example: `params: { 'speed>=': 300 }` filters for car data where speed is greater than or equal to 300.
+* Example: `params: { 'date<': '2024-05-20T12:00:00' }` filters for data before a specific timestamp.
+* Refer to the [OpenF1 API Documentation - Data Filtering](https://openf1.org/#data-filtering) section for more details on available filters and operators.
 
 ## Types
 
