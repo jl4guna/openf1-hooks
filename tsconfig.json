@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "target": "ES2020", // Target modern JavaScript features
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "resolveJsonModule": true, // Allow importing JSON files
+    "moduleDetection": "force", // Treat files as modules
+    "isolatedModules": true, // Ensure each file can be safely compiled separately
+
+    /* Strictness */
+    "strict": true, // Enable all strict type-checking options
+    "noUncheckedIndexedAccess": true, // Add 'undefined' to index signatures
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+
+    /* Bundled library */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Specify library files to be included in the compilation
+    "jsx": "react-jsx", // Support modern JSX transformation
+
+    /* Module Resolution */
+    "module": "ESNext", // Use modern module system
+    "moduleResolution": "Bundler", // Mimic bundler resolution (Vite, tsup)
+
+    /* Output */
+    "declaration": true, // Generate corresponding '.d.ts' file
+    "declarationMap": true, // Generate a sourcemap for each corresponding '.d.ts' file
+    "sourceMap": true, // Generate corresponding '.map' file
+    "outDir": "dist", // Redirect output structure to the directory
+    "removeComments": false, // Do not remove comments to preserve documentation
+    "noEmit": false, // Set to true for type checking only (e.g., in lint script)
+
+    /* Project Structure */
+    "rootDir": "src", // Specify the root directory of input files
+    "baseUrl": ".", // Base directory to resolve non-absolute module names
+    "paths": {
+      "@/*": ["src/*"] // Example path alias if needed
+    }
+  },
+  "include": ["src/**/*"], // Files to include in compilation
+  "exclude": ["node_modules", "dist"] // Files/directories to exclude
+} 

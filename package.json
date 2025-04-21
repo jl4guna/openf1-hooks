@@ -1,0 +1,56 @@
+{
+  "name": "openf1-react-query",
+  "version": "0.1.0",
+  "description": "React Query wrapper for the OpenF1 API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "react-query",
+    "openf1",
+    "formula1",
+    "f1",
+    "api",
+    "wrapper",
+    "typescript",
+    "hooks"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/openf1-react-query.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/openf1-react-query/issues"
+  },
+  "homepage": "https://github.com/your-username/openf1-react-query#readme",
+  "dependencies": {
+    "@tanstack/react-query": "^5.45.0",
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "@tanstack/react-query": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
