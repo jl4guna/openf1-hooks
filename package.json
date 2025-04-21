@@ -1,6 +1,6 @@
 {
   "name": "openf1-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React Query hooks for the OpenF1 API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
