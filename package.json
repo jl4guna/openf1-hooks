@@ -1,7 +1,7 @@
 {
-  "name": "openf1-react-query",
+  "name": "openf1-hooks",
   "version": "0.1.0",
-  "description": "React Query wrapper for the OpenF1 API",
+  "description": "React Query hooks for the OpenF1 API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/openf1-react-query.git"
+    "url": "git+https://github.com/jl4guna/openf1-hooks.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/openf1-react-query/issues"
+    "url": "https://github.com/jl4guna/openf1-hooks/issues"
   },
-  "homepage": "https://github.com/your-username/openf1-react-query#readme",
+  "homepage": "https://github.com/jl4guna/openf1-hooks#readme",
   "dependencies": {
     "@tanstack/react-query": "^5.45.0",
     "axios": "^1.7.2"

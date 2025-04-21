@@ -1,4 +1,4 @@
-# openf1-react-query
+# openf1-hooks
 
 React Query wrapper for the unofficial [OpenF1 API](https://openf1.org/).
 
@@ -7,11 +7,11 @@ Provides TypeScript-ready custom hooks to easily fetch Formula 1 data (lap times
 ## Installation
 
 ```bash
-npm install openf1-react-query @tanstack/react-query axios
+npm install openf1-hooks @tanstack/react-query axios
 # or
-yarn add openf1-react-query @tanstack/react-query axios
+yarn add openf1-hooks @tanstack/react-query axios
 # or
-pnpm add openf1-react-query @tanstack/react-query axios
+pnpm add openf1-hooks @tanstack/react-query axios
 ```
 
 **Note:** `@tanstack/react-query` and `axios` are peer dependencies and need to be installed alongside this package.
@@ -47,7 +47,7 @@ Import the desired hook and use it in your React components.
 
 ```jsx
 import React from 'react';
-import { useSessions } from 'openf1-react-query';
+import { useSessions } from 'openf1-hooks';
 
 function SessionList() {
   // Fetch sessions for the 2024 Monaco Grand Prix
@@ -85,7 +85,7 @@ export default SessionList;
 
 ```jsx
 import React from 'react';
-import { useCarData } from 'openf1-react-query';
+import { useCarData } from 'openf1-hooks';
 
 function DriverTelemetry({ driverNumber }) {
   // Fetch latest car data for a specific driver in the latest session
