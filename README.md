@@ -7,14 +7,14 @@ Provides TypeScript-ready custom hooks to easily fetch Formula 1 data (lap times
 ## Installation
 
 ```bash
-npm install openf1-hooks @tanstack/react-query axios
+npm install openf1-hooks @tanstack/react-query
 # or
-yarn add openf1-hooks @tanstack/react-query axios
+yarn add openf1-hooks @tanstack/react-query
 # or
-pnpm add openf1-hooks @tanstack/react-query axios
+pnpm add openf1-hooks @tanstack/react-query
 ```
 
-**Note:** `@tanstack/react-query` and `axios` are peer dependencies and need to be installed alongside this package.
+**Note:** `@tanstack/react-query` is peer dependencies and need to be installed alongside this package.
 
 ## Setup
 
@@ -43,7 +43,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 Import the desired hook and use it in your React components.
 
-**Example: Fetching Session Data**
+### **Example: Fetching Session Data**
 
 ```jsx
 import React from 'react';
@@ -81,7 +81,7 @@ function SessionList() {
 export default SessionList;
 ```
 
-**Example: Fetching Latest Car Data for a Driver**
+### **Example: Fetching Latest Car Data for a Driver**
 
 ```jsx
 import React from 'react';
@@ -128,26 +128,26 @@ export default DriverTelemetry;
 
 ## Available Hooks
 
-*   `useCarData(params?, options?)`
-*   `useDrivers(params?, options?)`
-*   `useIntervals(params?, options?)`
-*   `useLaps(params?, options?)`
-*   `useLocation(params?, options?)`
-*   `useMeetings(params?, options?)`
-*   `usePit(params?, options?)`
-*   `usePosition(params?, options?)`
-*   `useRaceControl(params?, options?)`
-*   `useSessions(params?, options?)`
-*   `useStints(params?, options?)`
-*   `useTeamRadio(params?, options?)`
-*   `useWeather(params?, options?)`
+* `useCarData(params?, options?)`
+* `useDrivers(params?, options?)`
+* `useIntervals(params?, options?)`
+* `useLaps(params?, options?)`
+* `useLocation(params?, options?)`
+* `useMeetings(params?, options?)`
+* `usePit(params?, options?)`
+* `usePosition(params?, options?)`
+* `useRaceControl(params?, options?)`
+* `useSessions(params?, options?)`
+* `useStints(params?, options?)`
+* `useTeamRadio(params?, options?)`
+* `useWeather(params?, options?)`
 
 Refer to `src/types.ts` for the specific parameters (`*Params`) available for each hook and the structure of the returned data.
 
 ## Contributing
 
-Contributions are welcome! Please refer to the contribution guidelines (TODO: Add link).
+Contributions are welcome! Please refer to the contribution guidelines.
 
 ## License
 
-MIT 
+MIT
